@@ -1,0 +1,60 @@
+class A as
+
+  attribute value : number
+
+  def static soma as
+    x : number
+    b : B
+  begin
+    var r : number
+    var t : number
+
+    t = b.min
+    r = this.count
+    r = t + x
+
+    return r
+  end
+
+  attribute count : number
+
+end
+
+class B extends A as
+
+  def dynamic calc as
+    x : number
+    y : number
+  begin
+    var v : number
+    v = 2 * x
+    return v
+  end
+
+  attribute min : number
+  attribute max : number
+
+end
+
+program
+  var p : number
+  var q : number
+
+  p = 10
+  q = 30
+
+  io.print(p)
+
+  var b: B
+  var a: A
+
+  b = new B
+  a = b
+  b = a
+
+  p = b.calc(p, q)
+  io.print(p)
+
+  q = a.soma(p, b)
+  io.print(q)
+end

@@ -1,0 +1,14 @@
+program
+  var x:number
+  var p:number
+  var q:number
+
+  x = 10
+  io.print(x)
+
+  p = 10
+  q = 30
+
+  io.print(p)
+  io.print(q)
+end
